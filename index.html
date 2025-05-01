@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bypasser Hub Premium</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    h1 {
+      font-size: 3em;
+      background: linear-gradient(to right, #00ffff, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: pulse 3s infinite;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+
+    .button {
+      background: #00ccff;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.2em;
+      margin-top: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ccff;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    .modal-content {
+      background: #222;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 25px #00ccff88;
+      animation: zoomIn 0.5s ease-out;
+    }
+
+    .icon-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .icon-buttons img {
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .icon-buttons img:hover {
+      transform: scale(1.1);
+    }
+
+    .note {
+      text-align: center;
+      margin: 50px 20px 0;
+      font-size: 1.1em;
+      color: #aaa;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { text-shadow: 0 0 10px #00ffff; }
+      50% { text-shadow: 0 0 20px #ff00ff; }
+      100% { text-shadow: 0 0 10px #00ffff; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Bypasser Hub Premium</h1>
+  <p>The most advanced Roblox script hub. Purchase now for exclusive features.</p>
+  <button class="button" onclick="openModal()">Purchase</button>
+</header>
+
+<div class="modal" id="purchaseModal">
+  <div class="modal-content">
+    <h2>Select Payment Method</h2>
+    <div class="icon-buttons">
+      <a href="https://www.roblox.com/game-pass/1192842867/Premium-Script" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Roblox_logo_2017.svg" alt="Roblox Icon" width="80" height="80">
+</a>
+
+
+
+
+      </a>
+      <a href="#" id="paypalLink">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal Icon">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="note">
+  <p><strong>Note:</strong> If you purchased, please open a ticket in our Discord server to get whitelisted.<br>
+  Server link: <a href="https://discord.gg/qxeCZT5c" target="_blank" style="color:#00ccff;">https://discord.gg/qxeCZT5c</a></p>
+</div>
+
+<script>
+  function openModal() {
+    document.getElementById('purchaseModal').style.display = 'flex';
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById('purchaseModal');
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  }
+</script>
+
+</body>
+</html>
